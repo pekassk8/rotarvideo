@@ -13,15 +13,14 @@ App web (PWA) para **girar tus videos al instante, sin perder calidad**. Pensada
 
 La app es 100 % estática, así que GitHub la puede servir gratis:
 
-1. Fusiona esta rama en `main` (o abre el repo y pulsa el botón de merge del pull request si hay uno).
-2. En GitHub, entra a **Settings → Pages** de este repositorio.
-3. En **Source** elige **“Deploy from a branch”**.
-4. En **Branch** elige `main` y la carpeta `/ (root)`. Guarda.
-5. Espera 1–2 minutos. Tu app quedará en:
+1. En GitHub, entra a **Settings → Pages** de este repositorio.
+2. En **Source** elige **“Deploy from a branch”**.
+3. En **Branch** elige la rama por defecto del repositorio y la carpeta `/ (root)`. Guarda.
+4. Espera 1–2 minutos. Tu app quedará en:
 
    **https://pekassk8.github.io/rotarvideo/**
 
-> Cualquier cambio que subas a `main` se publica solo.
+> Cualquier cambio que se suba a esa rama se publica solo.
 
 ## 2. Instalarla en el iPhone
 
