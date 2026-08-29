@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>RotarVideo · Gira tus videos al instante</title>
+  <meta name="description" content="Gira tus videos 90°, 180° o 270° al instante, sin recodificar y sin perder calidad. Funciona sin conexión.">
+
+  <meta name="theme-color" content="#14092b">
+  <link rel="manifest" href="./manifest.webmanifest">
+
+  <!-- iOS: instalable en pantalla de inicio -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="RotarVideo">
+  <link rel="apple-touch-icon" href="./icons/icon-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app" class="app">
+
+    <header class="header">
+      <img src="./icons/icon-192.png" alt="" class="logo">
+      <div>
+        <h1>RotarVideo</h1>
+        <p class="tagline">Gira tus videos al instante, sin perder calidad</p>
+      </div>
+    </header>
+
+    <div id="installBanner" class="install-banner" hidden>
+      <span>📲 Para usarla como app: toca <strong>Compartir</strong> <span class="share-icon">⎋</span> y luego <strong>“Añadir a pantalla de inicio”</strong>.</span>
+      <button id="installClose" class="install-close" aria-label="Cerrar aviso">✕</button>
+    </div>
+
+    <main class="main">
+
+      <section class="picker" id="pickerSection">
+        <label class="btn btn-primary btn-big" for="fileInput">🎞️ Elegir videos</label>
+        <input id="fileInput" type="file" accept="video/mp4,video/quicktime,video/*" multiple hidden>
+        <p class="hint">Puedes seleccionar varios a la vez desde tu Fototeca.<br>
+        Cada video viene listo con <strong>3 giros (270°)</strong>, igual que darle 3 veces a girar en Fotos. Ajústalo si lo necesitas.</p>
+      </section>
+
+      <section id="cards" class="cards"></section>
+
+      <section id="emptyState" class="empty">
+        <div class="empty-art">⟲</div>
+        <p>Elige los videos que se ven volteados y guárdalos ya girados en tu Fototeca.</p>
+        <ul class="steps">
+          <li><span>1</span><div>Toca <strong>Elegir videos</strong> y selecciona los que quieras.</div></li>
+          <li><span>2</span><div>Comprueba en la vista previa que se ven bien (por defecto se aplican 3 giros = 270°).</div></li>
+          <li><span>3</span><div>Toca <strong>Guardar</strong> y elige <strong>“Guardar video”</strong> en el menú.</div></li>
+        </ul>
+      </section>
+
+    </main>
+
+    <div id="saveBar" class="save-bar" hidden>
+      <button id="saveAll" class="btn btn-primary btn-big">💾 Guardar todos (<span id="saveCount">0</span>)</button>
+      <button id="clearAll" class="btn btn-ghost">Limpiar</button>
+      <p class="save-tip">En el menú que se abre, toca <strong>“Guardar video”</strong> para enviarlos a tu Fototeca.</p>
+    </div>
+
+    <footer class="footer">
+      <p>El giro se aplica en los metadatos del video (como hace la app Fotos): es instantáneo, no recodifica y no pierde calidad. Tus videos nunca salen de tu iPhone.</p>
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
